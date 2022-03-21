@@ -132,7 +132,10 @@
                                                     <constraint firstAttribute="height" constant="34" id="MRm-kU-bsK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="8xq-rC-CyI" id="cA4-YS-36H"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fyy-xF-XWq">
                                                 <rect key="frame" x="0.0" y="42" width="40" height="34"/>
@@ -140,7 +143,10 @@
                                                     <constraint firstAttribute="height" constant="34" id="uin-Xp-QMS"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="8xq-rC-CyI" id="s4F-Li-y87"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h50-2G-cuv">
                                                 <rect key="frame" x="0.0" y="84" width="40" height="34"/>
@@ -148,7 +154,10 @@
                                                     <constraint firstAttribute="height" constant="34" id="b8y-IO-uU9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="8xq-rC-CyI" id="2Sx-3w-mH4"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -157,13 +166,25 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgV-7v-rdc">
+                                <rect key="frame" x="159.5" y="575" width="56" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="8xq-rC-CyI" eventType="touchUpInside" id="5mI-R7-y88"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jm1-0X-Mz7"/>
                         <color key="backgroundColor" red="0.0" green="0.17972166178116258" blue="0.44515596822635489" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Jm1-0X-Mz7" firstAttribute="trailing" secondItem="o9I-bc-J2q" secondAttribute="trailing" constant="16" id="5gn-FB-JI7"/>
+                            <constraint firstItem="Jm1-0X-Mz7" firstAttribute="bottom" secondItem="fgV-7v-rdc" secondAttribute="bottom" constant="51" id="9hZ-ez-kuc"/>
                             <constraint firstItem="Jm1-0X-Mz7" firstAttribute="trailing" secondItem="KIx-Zf-Pao" secondAttribute="trailing" constant="16" id="MGh-7z-Kct"/>
                             <constraint firstItem="o9I-bc-J2q" firstAttribute="leading" secondItem="Jm1-0X-Mz7" secondAttribute="leading" constant="16" id="dKa-md-8eC"/>
+                            <constraint firstItem="fgV-7v-rdc" firstAttribute="centerX" secondItem="pzC-GD-slX" secondAttribute="centerX" id="f9i-KX-oWQ"/>
                             <constraint firstItem="KIx-Zf-Pao" firstAttribute="top" secondItem="o9I-bc-J2q" secondAttribute="bottom" constant="30" id="n7K-ny-IZt"/>
                             <constraint firstItem="o9I-bc-J2q" firstAttribute="top" secondItem="Jm1-0X-Mz7" secondAttribute="top" constant="16" id="nDP-gq-OkO"/>
                             <constraint firstItem="KIx-Zf-Pao" firstAttribute="leading" secondItem="Jm1-0X-Mz7" secondAttribute="leading" constant="16" id="pNy-Ih-MZ0"/>

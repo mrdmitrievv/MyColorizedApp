@@ -14,6 +14,16 @@ class FirstViewController: UIViewController {
         
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let setColorVC = segue.destination as! SetColorViewController
+        setColorVC.delegate = self
+        
+        setColorVC.colorizedViewColor = view.backgroundColor
+    }
 }
 
+extension FirstViewController: ColorViewControllerDelegate {
+    func saveColor(_ color: UIColor) {
+        view.backgroundColor = color
+    }
+}
